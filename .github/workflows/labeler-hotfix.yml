@@ -2,7 +2,7 @@ name: Labeler hotfix
 on:
   pull_request:
     branches:
-      - "hotfix/**"
+      - 'hotfix/**'
 
 jobs:
   label:
