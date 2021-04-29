@@ -31,7 +31,7 @@ jobs:
       - name: Send notification to Slack when master/migration has been updated
         uses: pullreminders/slack-action@v1.0.7
         with:
-          # "channel"にSlackチャンネルIDを代入
-          args: '{\"channel\":\"DAMGQ1FGQ\", \"text\":\"migration was modified\"}'
+          # webhookテスト用のチャンネルへ
+          args: '{\"channel\":\"GH1DHG30S\", \"text\":\"migration was modified\"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
