@@ -6,11 +6,11 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'migration/**'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - 'migration/**'
 
@@ -23,12 +23,11 @@ jobs:
   notify:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Send notification to Slack when master/migration has been updated
+      - name: Send notification to Slack when main/migration has been updated
         uses: pullreminders/slack-action@v1.0.7
         with:
           # webhookテスト用のチャンネルへ
