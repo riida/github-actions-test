@@ -32,7 +32,6 @@ jobs:
         uses: pullreminders/slack-action@v1.0.7
         with:
           # webhookテスト用のチャンネルへ
-          args: "{\"channel\":$SLACK_CHANNEL_ID, \"text\":\"migration was modified\"}"
+          args: "{\"channel\":\"GH1DHG30S\", \"text\":\"migration was modified\"}"
         env:
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
